@@ -8,9 +8,7 @@ import SecondNav from "./components/SecondNav.jsx";
 createRoot(document.getElementById("root")).render(
   <>
     <Layout Header={<Header />} Footer={<Footer />}>
-      <div className="container">
-        <SecondNav />
-      </div>
+      <SecondNav />
     </Layout>
   </>
 );
