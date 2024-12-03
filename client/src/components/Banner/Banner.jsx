@@ -1,9 +1,10 @@
 import React from "react";
 import "slick-carousel/slick/slick.css";
-import { SlArrowLeft } from "react-icons/sl";
-import { SlArrowRight } from "react-icons/sl";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import HeadphonesSection from "./HeadphonesSection";
+import exportData from "./gridData";
 
 // Slide data
 const SlideData = [
@@ -34,43 +35,19 @@ const SlideData = [
   },
 ];
 
-// Next Arrow component
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`absolute transform right-0 top-[calc(22%+5px)] w-20 h-64 -translate-y-1/2 p-4 focus:outline-none active:ring-4 active:ring-offset-blue-600 rounded-sm cursor-pointer z-10`}
-      onClick={onClick}
-      style={{ ...style, zIndex: 10 }}
-      aria-label="Next Slide"
-    >
-      <div className="flex items-center justify-center h-full">
-        <span className="text-black text-3xl">
-          <SlArrowRight />
-        </span>
-      </div>
+// Arrow Components (Refactored outside the main component)
+const Arrow = ({ direction, onClick, style }) => (
+  <div
+    className={`absolute top-[26%] w-20 h-1/2 transform -translate-y-1/2 p-4 focus:outline-none active:ring-4 active:ring-offset-blue-600 rounded-sm cursor-pointer z-10 ${direction === "next" ? "right-0" : "left-0"}`}
+    onClick={onClick}
+    style={style}
+    aria-label={direction === "next" ? "Next Slide" : "Previous Slide"}
+  >
+    <div className="flex items-center justify-center h-full">
+      {direction === "next" ? <SlArrowRight className="text-black text-3xl" /> : <SlArrowLeft className="text-black text-3xl" />}
     </div>
-  );
-}
-
-// Prev Arrow component
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`absolute transform top-[calc(22%+5px)] w-20 h-64 -translate-y-1/2 p-4 focus:outline-none active:ring-4 active:ring-offset-blue-600 rounded-sm cursor-pointer z-10`}
-      onClick={onClick}
-      style={{ ...style, zIndex: 10 }}
-      aria-label="Previous Slide"
-    >
-      <div className="flex items-center justify-center h-full">
-        <span className="text-black text-3xl">
-          <SlArrowLeft />
-        </span>
-      </div>
-    </div>
-  );
-}
+  </div>
+);
 
 const Banner = () => {
   const settings = {
@@ -82,13 +59,13 @@ const Banner = () => {
     slidesToScroll: 1,
     initialSlide: 2,
     draggable: false,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <Arrow direction="next" />,
+    prevArrow: <Arrow direction="prev" />,
   };
 
   return (
     <section>
-      <div className="slider-container container relative">
+      <div className="slider-container container relative max-h-[1150px]">
         {/* Slick Slider */}
         <Slider {...settings}>
           {SlideData.map((slide) => (
@@ -102,11 +79,13 @@ const Banner = () => {
           ))}
         </Slider>
 
-        <div className="absolute top-1/2 bg-primary-light w-full h-1/2">
-          {/* Centered Text */}
-          <h1 className="absolute text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-semibold">
-            Hello
-          </h1>
+        {/* Grid Section */}
+        <div className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 w-full">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center bg-transparent">
+            {exportData.map(({ title, items, link }) => (
+              <HeadphonesSection key={link} title={title} items={items} link={link} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

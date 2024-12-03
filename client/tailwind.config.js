@@ -13,6 +13,7 @@ export default {
           dark: '#0f1111',
         },  // Custom color named "primary"
         secondary: '#febd69',  // Custom color named "secondary"
+        secondary_dark: '#e78405',  // Custom color named "secondary"
         link: '#246FB6',  // Custom color named "danger"
         hover: '#f3a847',  // Custom color named "danger"
       },

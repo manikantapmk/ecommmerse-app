@@ -108,7 +108,7 @@ const Header = () => {
           <div className="flex items-center space-x-1">
             <span className="text-4xl relative">
               <LiaCartPlusSolid />
-              <span className="absolute top-0 left-3 bg-primary-dark text-secondary text-xs font-bold p-1 pb-0 rounded-full">
+              <span className="absolute top-0 left-3 bg-primary-dark text-secondary_dark text-xs font-bold p-1 pb-0 rounded-full">
                 0
               </span>
             </span>

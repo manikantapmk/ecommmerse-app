@@ -4,7 +4,7 @@ import Layout from "./layout/Layout.jsx";
 import Header from "./layout/Header.jsx";
 import Footer from "./layout/Footer.jsx";
 import SecondNav from "./components/SecondNav.jsx";
-import Banner from "./components/Banner.jsx";
+import Banner from "./components/Banner/Banner.jsx";
 
 createRoot(document.getElementById("root")).render(
   <>
