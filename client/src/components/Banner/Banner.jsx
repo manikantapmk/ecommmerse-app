@@ -35,6 +35,16 @@ const SlideData = [
   },
 ];
 
+// Shuffle function to randomize an array
+const shuffleArray = (array) => {
+  const shuffledArray = [...array];  // Make a copy of the original array
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];  // Swap elements
+  }
+  return shuffledArray;
+};
+
 // Arrow Components (Refactored outside the main component)
 const Arrow = ({ direction, onClick, style }) => (
   <div
@@ -63,6 +73,9 @@ const Banner = () => {
     prevArrow: <Arrow direction="prev" />,
   };
 
+  // Shuffle exportData randomly
+  const shuffledData = shuffleArray(exportData);
+
   return (
     <section>
       <div className="slider-container container relative max-h-[1150px]">
@@ -82,7 +95,8 @@ const Banner = () => {
         {/* Grid Section */}
         <div className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 w-full">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center bg-transparent">
-            {exportData.map(({ title, items, link }) => (
+            {/* Map over shuffled data */}
+            {shuffledData.map(({ title, items, link }) => (
               <HeadphonesSection key={link} title={title} items={items} link={link} />
             ))}
           </div>
