@@ -249,6 +249,106 @@ const ProductsData = [
     brand: "Panasonic",
     imageUrl: "https://m.media-amazon.com/images/I/51XGcwwG8qL._AC_UL320_.jpg",
   },
+  {
+    id: "26",
+    name: "AllExtreme CYL-06-T Multi-Purpose Bike Chain Cleaner Brush",
+    description: "Soft and long bristles for quick and easy cleaning of bike chains.",
+    price: 149,
+    rating: 4.5,
+    category: "bike accessories",
+    brand: "AllExtreme",
+    imageUrl: "https://m.media-amazon.com/images/I/610XWnl+nXL._AC_UL320_.jpg"
+  },
+  {
+    id: "27",
+    name: "Autofy Universal Bike Cover",
+    description: "UV protection and dustproof bike body cover for two-wheelers.",
+    price: 248,
+    rating: 4.2,
+    category: "bike accessories",
+    brand: "Autofy",
+    imageUrl: "https://m.media-amazon.com/images/I/51k9wNfghBS._AC_UL320_.jpg"
+  },
+  {
+    id: "28",
+    name: "OTO2EYE Aluminium Airplane Light (7 Colors)",
+    description: "Waterproof universal warning signal blinker LED.",
+    price: 99,
+    rating: 4.0,
+    category: "bike accessories",
+    brand: "OTO2EYE",
+    imageUrl: "https://m.media-amazon.com/images/I/61jT-ysEfnL._AC_UL320_.jpg"
+  },
+  {
+    id: "29",
+    name: "Motomax Bike Liquid Polish",
+    description: "Removes tough stains, provides high gloss and shine on painted surfaces.",
+    price: 33,
+    rating: 4.3,
+    category: "bike accessories",
+    brand: "Motomax",
+    imageUrl: "https://m.media-amazon.com/images/I/51Wi9-kFOxL._AC_UL320_.jpg"
+  },
+  {
+    id: "30",
+    name: "Kandid Advance Heavy Duty Digital Number Lock",
+    description: "Universal combination cable lock for bike and helmet security.",
+    price: 199,
+    rating: 4.2,
+    category: "bike accessories",
+    brand: "Kandid",
+    imageUrl: "https://m.media-amazon.com/images/I/61z0Kx1ifGL._AC_UL320_.jpg"
+  },
+  {
+    id: "31",
+    name: "RADIANT Car Dustbin",
+    description: "Mini car trash bin for maintaining cleanliness inside your car.",
+    price: 149,
+    rating: 4.4,
+    category: "car accessories",
+    brand: "RADIANT",
+    imageUrl: "https://m.media-amazon.com/images/I/51BLWSTs7NL._AC_UL320_.jpg"
+  },
+  {
+    id: "32",
+    name: "SOFTSPUN Microfiber Cloth - 4 pcs",
+    description: "Thick lint and streak-free multipurpose microfiber cloths (340 GSM).",
+    price: 299,
+    rating: 4.7,
+    category: "car accessories",
+    brand: "SOFTSPUN",
+    imageUrl: "https://m.media-amazon.com/images/I/81dsWgzXLrL._AC_UL320_.jpg"
+  },
+  {
+    id: "33",
+    name: "Automaze Center Console Armrest Cover Pad",
+    description: "Comfortable armrest cover pad with side pockets, universal fit for SUVs.",
+    price: 807,
+    rating: 4.2,
+    category: "car accessories",
+    brand: "Automaze",
+    imageUrl: "https://m.media-amazon.com/images/I/61azD0IlH7L._AC_UL320_.jpg"
+  },
+  {
+    id: "34",
+    name: "CAR BASICS French Vanilla Wood Perfume",
+    description: "Solid wood perfume with two free dropper bottles of fragrance oil.",
+    price: 369,
+    rating: 3.8,
+    category: "car accessories",
+    brand: "CAR BASICS",
+    imageUrl: "https://m.media-amazon.com/images/I/71zeJqcae5L._AC_UL320_.jpg"
+  },
+  {
+    id: "35",
+    name: "ADINOX 100% Waterproof Jungle Print Car Cover",
+    description: "Heavy-duty fabric car cover compatible with Maruti Suzuki Alto K10.",
+    price: 1840,
+    rating: 4.5,
+    category: "car accessories",
+    brand: "ADINOX",
+    imageUrl: "https://m.media-amazon.com/images/I/61nGOS2QFwL._AC_UL320_.jpg"
+  }
 ];
 
 export default ProductsData;
